@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Fish 2</title>
+    <link rel="stylesheet" href="index1.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="fish-box">
+            <img class="fish" src="karp-no-way.gif" alt="">
+        </div>
+        <!-- <div class="box">
+            <div class="fish"></div>
+        </div> -->
+        <svg width="100%" height="100%" viewBox="0 0 1140 352" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="path"
+                d="M453.499 0.5C360.5 0.5 294 103.5 132.5 64.5007C-28.9998 25.5016 -24.9994 289.001 55.9998 304.501C136.999 320.001 159.999 252.001 250.999 252.001C341.999 252.001 399.499 351.001 525.499 351.001C651.498 351.001 701.498 252.001 791.998 252.001C882.498 252.001 1012 334.501 1074 304.501C1136 274.5 1128.84 217 1138.5 150.5C1148.16 84 1074 15.0005 981.499 15.0005C889 15.0005 834.499 103.5 750.999 103.5C667.499 103.5 546.498 0.5 453.499 0.5Z"
+                stroke="white" />
+        </svg>
+
+
+        <div class="container">
+            <div class="heading">Title</div>
+            <div class="heading">Title</div>
+            <div class="heading">Title</div>
+            <div class="heading">Title</div>
+            <div class="heading">Title</div>
+            <div class="heading">Title</div>
+            <div class="heading">Title</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // const fish = document.querySelector('.fish');
+
+
+        // // Функция для анимации угла поворота
+        // function rotateFish() {
+        //     gsap.to(fish, {
+        //         rotation: 185,
+        //         duration: 1,
+        //         ease: 'power1.inOut',
+        //         yoyo: true, // Включает обратное движение
+        //         repeat: -1 // Повторяет бесконечно
+        //     });
+        // }
+
+        // // Функция для анимации движения
+        // function animateFish() {
+        //     rotateFish(); // Запуск анимации поворота
+
+        //     // Анимация движения с левого края до правого
+        //     gsap.to(fish, {
+        //         x: window.innerWidth - 350, // Перемещение на ширину экрана
+        //         duration: 10, // Длительность анимации
+        //         ease: 'power1.inOut',
+        //         onComplete: () => {
+        //             // Разворот на 0° и движение обратно
+        //             gsap.to(fish, {
+        //                 rotation: 0, // Разворот на 0°
+        //                 duration: 7,
+        //                 ease: 'power1.inOut',
+        //                 x: 0,
+        //                 onComplete: () => {
+        //                     gsap.to(fish, {
+        //                         x: 0, // Перемещение обратно влево
+        //                         rotation: 180, // Угол поворота
+        //                         duration: 1,
+        //                         ease: 'power1.inOut',
+        //                         onComplete: animateFish // Запуск анимации снова
+        //                     });
+        //                 }
+        //             });
+        //         }
+        //     });
+        // }
+        // // Запуск анимации при загрузке страницы
+        // window.onload = animateFish;
+    </script>
+</body>
+
+</html>

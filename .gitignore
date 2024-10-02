@@ -1,0 +1,15 @@
+/node_modules
+.vscode/*
+node_modules
+
+/.DS_Store
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+.Spotlight-V100
+.Trashes
+._*
+
+wp-config.php
+
