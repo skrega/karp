@@ -5334,8 +5334,9 @@ ul.products.columns-1 {
 }
 .svg {
   position: fixed;
-  opacity: 0;
-  top: 0;
+  opacity: 1;
+  top: -20px;
+  margin: 0 auto;
 }
 
 .fish-box {
