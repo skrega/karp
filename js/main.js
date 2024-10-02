@@ -12,8 +12,8 @@ gsap.to(fish, {
     align: "#path",
     alignOrigin: [0.5, 0.5],
     autoRotate: true,
-    start: 1, // Начало пути — конец
-    end: 0, // Конец пути — начало
+    start: 0, // Начало пути — конец
+    end: 1, // Конец пути — начало
   },
   // ease: "power1.inOut",
   repeat: -1, // Круговое движение повторяется бесконечно
