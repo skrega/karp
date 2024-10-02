@@ -5334,7 +5334,7 @@ ul.products.columns-1 {
 }
 .svg {
   position: fixed;
-  opacity: 1;
+  opacity: 0;
   top: -20px;
   margin: 0 auto;
 }
