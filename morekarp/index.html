@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="fish-box">
+        <img class="fish" src="../karp-no-way.gif" alt="">
+    </div>
+    <div class="container">
+        <div class="heading">Title</div>
+        <div class="heading">Title</div>
+        <div class="heading">Title</div>
+        <div class="heading">Title</div>
+        <div class="heading">Title</div>
+        <div class="heading">Title</div>
+        <div class="heading">Title</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+    <script>
+        let scrolltop = pageYOffset;
+        let lastScrollY = window.scrollY;
+
+        gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+
+        const fish = document.querySelector('.fish')
+        const fishBox = document.querySelector('.fish-box')
+
+        const rx = window.innerWidth < 1000 ? window.innerWidth / 1200 : 1
+        const ry = window.innerHeight < 700 ? window.innerHeight / 1200 : 1
+
+        const path = [
+            // 1
+            {
+                x: 800,
+                y: 200
+            },
+            {
+                x: 900,
+                y: 20
+            },
+            {
+                x: 1100,
+                y: 100
+            },
+            // 2
+            {
+                x: 1000,
+                y: 200
+            },
+            {
+                x: 900,
+                y: 20
+            },
+            {
+                x: 10,
+                y: 500
+            },
+            // 3
+            {
+                x: 100,
+                y: 300
+            },
+            {
+                x: 500,
+                y: 400
+            },
+            {
+                x: 1000,
+                y: 200
+            },
+            // 4
+            {
+                x: 1100,
+                y: 300
+            },
+            {
+                x: 400,
+                y: 400
+            },
+            {
+                x: 200,
+                y: 250
+            },
+            // 5
+            {
+                x: 100,
+                y: 300
+            },
+            {
+                x: 500,
+                y: 450
+            },
+            {
+                x: 1100,
+                y: 500
+            }
+        ]
+
+        const scaledPath = path.map(({
+            x,
+            y
+        }) => {
+            return {
+                x: x * rx,
+                y: y * ry
+            }
+        })
+            
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                scrub: 1.5,
+            },
+        })
+        tl.to(fish, {
+            motionPath: {
+                path: scaledPath,
+                align: 'self',
+                alignOrigin: [0.5, 0.5],
+                autoRotate: true
+            },
+            ease: 'linear',
+            duration: 20,
+            immediateRender: true,
+            // onUpdate: (self) => {
+            //     if (pageYOffset > scrolltop) { // down scroll
+            //         fishBox.classList.add('down')
+            //         fishBox.classList.remove('up')
+            //     } else { // up scroll
+            //         fishBox.classList.add('up')
+            //         fishBox.classList.remove('down')
+            //     }
+            //     if (pageYOffset === scrolltop) { // first station
+            //         fishBox.classList.remove('up')
+            //     }
+            //     scrolltop = pageYOffset;
+            // }
+        })
+
+        tl.to(fish, {
+            motionPath: {
+                path: scaledPath,
+                align: 'self',
+                alignOrigin: [0.5, 0.5],
+                autoRotate: true
+            },
+            duration: 10,
+            immediateRender: true,
+            // ease: 'power4'
+        })
+
+        tl.to(fish, {
+            rotateY: -180
+        }, 1)
+        tl.to(fish, {
+            rotateY: 0
+        }, 2.5)
+        tl.to(fish, {
+            z: -500,
+            duration: 2,
+        }, 2.5)
+        tl.to(fish, {
+            rotateY: -180
+        }, 4)
+        tl.to(fish, {
+            rotateY: 0
+        }, 5.5)
+        tl.to(fish, {
+            z: -50,
+            duration: 2,
+        }, 5)
+        tl.to(fish, {
+            rotate: 0,
+            duration: 1,
+        }, '-=1')
+
+       tl.pause()
+
+    </script>
+</body>
+
+</html>

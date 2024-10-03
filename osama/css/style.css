@@ -5329,13 +5329,13 @@ ul.products.columns-1 {
 }
 
 
-.main{
-  position: relative;
-}
+/* 
 .svg {
   position: fixed;
   opacity: 0;
-  top: -20px;
+  left: 0;
+  right: 0;
+  top: 0px;
   margin: 0 auto;
 }
 
@@ -5351,10 +5351,47 @@ ul.products.columns-1 {
 .fish {
   width: 100%;
   height: 100%;
-  transition: transform .3s;
+  transition: transform 1s;
   transform: matrix(-1, 0, 0, -1, 0, 0);
 }
 
 .fish.up {
   transform: matrix(1, 0, 0, 1, 0, 0);
+} */
+
+
+
+.fish-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  perspective: 100rem;
+  perspective-origin: center center;
+  transform-style: preserve-3d;
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+.fish-box {
+  width: max-content;
+}
+
+.fish {
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  width: 339px;
+  height: 339px;
+  transform: matrix(-1, 0, 0, -1, 0, 0);
+  transition: all 1s;
+}
+
+.fish-wrapper.up .fish {
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.intro {
+  opacity: .1;
 }

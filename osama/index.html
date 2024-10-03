@@ -8,7 +8,7 @@
   <title>OSAMA</title>
   <link rel="stylesheet" href="css/swiper-bundle.min.css?v=20241002132712">
   <link rel="stylesheet" href="css/fancybox.css?v=20241002132712" />
-  <link rel="stylesheet" href="css/style.css?v=20241002132712">
+  <link rel="stylesheet" href="css/style.css?v=20241002132713">
 </head>
 
 
@@ -243,9 +243,10 @@
 
 
     <main class="main">
-      <div class="fish-box">
+
+      <!-- <div class="fish-box">
         <img class="fish" src="karp-no-way.gif" alt="">
-      </div>
+      </div> -->
 
       <!-- <svg class="svg" width="100vw" height="90vh" viewBox="0 0 1360 750" fill="none"
         xmlns="http://www.w3.org/2000/svg">
@@ -268,13 +269,21 @@
           d="M23.2194 327.784C-18.2816 377.284 8.42624 545.932 23.2194 580.285C38.0126 614.638 455.013 755.86 574.5 644.785C612.936 609.055 604.476 556.654 579.5 510.5C536.288 430.645 406.445 441.868 347 510.5C297.873 567.22 274.431 665.129 339.5 702.5C397.48 735.8 512.234 689.638 640.907 714.285C769.579 738.931 843.644 740.452 969.12 714.285C1096.41 687.74 1264.27 709.953 1273.92 580.285C1283.34 453.673 1128.78 360.824 1006.58 395.284C935.139 415.431 868.418 449.581 866.526 523.785C865.126 578.742 898.673 606.857 938.469 644.785C1085.74 785.137 1265.94 487.838 1322.02 292.284C1345.32 211.047 1346.53 209.878 1322.02 129C1254.01 -95.4307 1030 68.4988 809 22.4995C588 -23.4998 288.124 -4.14111 128.367 170.785C60.9258 244.629 64.7204 278.284 23.2194 327.784Z"
           stroke="black" />
       </svg> -->
-      <svg class="svg" width="100vw" height="90vh" viewBox="0 0 1205 700" fill="none"
+
+      <!-- last  version-->
+      <!-- <svg class="svg" width="100vw" height="90vh" viewBox="0 0 1205 700" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path id="path"
           d="M187.422 5.07626C309.026 60.0248 393.531 35.0025 525.238 56.4534C525.238 56.4534 807.497 98.588 985.813 138.293C1108 165.5 1190.06 253.346 1174.95 368.808C1164.43 449.21 1119.35 495.499 1047.19 532.487C968.978 572.578 876.664 601.417 822.134 532.487C770.518 467.243 791.501 372.952 857.597 322.432C916.423 277.469 980.193 290.918 1047.19 322.432C1134.07 363.299 1262.95 494.077 1174.95 532.487C1174.95 532.487 1079.51 574.251 1016.29 595.312C701.334 700.225 477.392 748.428 166.973 630.776C122.822 614.042 94.1768 597.677 70 557.121C48.5434 521.127 58.1176 423.341 83.5 390C116.841 346.204 298.218 344.369 329 390C352.536 424.889 327.615 559.288 291.976 581.673C259.377 602.148 127.057 572.922 91.9532 557.121C-107.554 467.317 65.8183 -49.8722 187.422 5.07626Z"
           stroke="black" />
-      </svg>
-
+      </svg> -->
+      <!-- 
+      <svg class="svg" width="100vw" height="90vh" viewBox="0 0 1220 679" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path id="path"
+          d="M372.999 0.5C426.111 19.0499 454.96 32.3592 508.999 48C575.993 67.3902 615.915 68.7792 683.499 86C754.509 104.094 787.429 133.987 857 157C941.772 185.041 1006.02 165.987 1077.5 219.5C1119.29 250.786 1182 265.196 1170 316C1160.64 355.609 1121.78 358.55 1085.5 377C1040.43 399.919 965.338 430.459 916 441.5C769.298 474.329 720.186 383.419 570 390C438.414 395.766 385.313 449.016 256.5 476.5C193.67 489.906 132.769 452.633 81.9993 492C38.472 525.751 11.0695 554.091 2.4993 608.5C-17.5115 735.54 199.937 646.676 327.999 658.5C523.212 676.524 633.956 658.5 829.999 658.5C982.304 658.5 1067.69 658.5 1220 658.5"
+          stroke="black" />
+      </svg> -->
 
 
 
@@ -326,8 +335,11 @@
 
         <div class="swiper-pagination"></div>
       </section>
-
-
+      <div class="fish-wrapper">
+        <div class="fish-box">
+          <img class="fish" src="karp-no-way.gif" alt="">
+        </div>
+      </div>
       <section class="menu">
         <div class="container">
           <div class="menu__inner">
@@ -3023,7 +3035,6 @@
           </div>
         </div>
       </section>
-
     </main>
 
     <!-- Подвал -->
@@ -3117,6 +3128,135 @@
   <script src="js/main.js?v=20241002132712"></script>
 
   <script>
+    // gsap.registerPlugin(MotionPathPlugin, ScrollTrigger)
+
+    // const rx = window.innerWidth < 1000 ? window.innerWidth / 1200 : 1
+    // const ry = window.innerHeight < 700 ? window.innerHeight / 1200 : 1
+
+    // const path = [
+    gsap.registerPlugin(MotionPathPlugin, ScrollTrigger)
+
+    const rx = window.innerWidth < 1000 ? window.innerWidth / 1200 : 1
+    const ry = window.innerHeight < 700 ? window.innerHeight / 1200 : 1
+
+    const path = [
+      // 1
+      {
+        x: 800,
+        y: 200
+      },
+      {
+        x: 900,
+        y: 20
+      },
+      {
+        x: 1150,
+        y: 200
+      },
+      // 2 вам может понравиться
+      {
+        x: 1000,
+        y: 400
+      },
+      {
+        x: 900,
+        y: 500
+      },
+      {
+        x: 10,
+        y: 600
+      },
+      // 3
+      {
+        x: 100,
+        y: 300
+      },
+      {
+        x: 500,
+        y: 400
+      },
+      {
+        x: 1000,
+        y: 500
+      },
+      // 4 салаты
+      {
+        x: 1100,
+        y: 300
+      },
+      {
+        x: 400,
+        y: 500
+      },
+      {
+        x: 200,
+        y: 650
+      },
+      // 5
+      {
+        x: 100,
+        y: 500
+      },
+      {
+        x: 500,
+        y: 600
+      },
+      {
+        x: 1100,
+        y: 700
+      }
+    ]
+
+    const scaledPath = path.map(({
+      x,
+      y
+    }) => {
+      return {
+        x: x * rx,
+        y: y * ry
+      }
+    })
+
+    const fish = document.querySelector('.fish')
+    const fishWrapper = document.querySelector('.fish-wrapper')
+    const fishBox = document.querySelector('.fish-box')
+
+    let scrolltop = pageYOffset;
+    let lastScrollY = window.scrollY;
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        scrub: 1.5,
+      },
+    })
+
+    tl.to(fishBox, {
+      motionPath: {
+        path: scaledPath,
+        align: 'self',
+        alignOrigin: [0.5, 0.5],
+        autoRotate: true
+      },
+      duration: 15,
+      immediateRender: true,
+    })
+    window.addEventListener('scroll', () => {
+      if (pageYOffset > scrolltop) { // down scroll
+        fishWrapper.classList.add('down')
+        fishWrapper.classList.remove('up')
+      } else { // up scroll
+        fishWrapper.classList.add('up')
+        fishWrapper.classList.remove('down')
+      }
+      if (pageYOffset === scrolltop) { // first station
+        fishWrapper.classList.remove('up')
+      }
+      scrolltop = pageYOffset;
+    })
+    tl.pause()
+  </script>
+
+  <!-- <script>
     let lastScrollY = window.scrollY;
     let scrolltop = pageYOffset;
     gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
@@ -3132,7 +3272,7 @@
         alignOrigin: [0.5, 0.5],
         autoRotate: true,
         start: 0, // Начало пути — конец
-        end: 1, // Конец пути — начало
+        end: 0.7, // Конец пути — начало
       },
 
       ease: 'linear',
@@ -3160,7 +3300,7 @@
         }
       }
     });
-  </script>
+  </script> -->
 
 </body>
 
