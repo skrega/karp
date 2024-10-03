@@ -5392,6 +5392,6 @@ ul.products.columns-1 {
 .fish-wrapper.up .fish {
   transform: matrix(1, 0, 0, 1, 0, 0);
 }
-.intro {
+/* .intro {
   opacity: .1;
-}
+} */
