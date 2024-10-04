@@ -5359,39 +5359,51 @@ ul.products.columns-1 {
   transform: matrix(1, 0, 0, 1, 0, 0);
 } */
 
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
 
 .fish-wrapper {
   width: 100%;
   height: 100vh;
   position: fixed;
-  top: 0px;
+  top: 0;
   left: 0;
-  perspective: 100rem;
-  perspective-origin: center center;
-  transform-style: preserve-3d;
-  pointer-events: none;
-  z-index: -1;
 }
-
-
 .fish-box {
   width: max-content;
 }
 
 .fish {
-  position: relative;
-  transform-style: preserve-3d;
-  transform-origin: center;
-  width: 339px;
-  height: 339px;
+  opacity: 0.5;
   transform: matrix(-1, 0, 0, -1, 0, 0);
-  transition: all 1s;
-  opacity: 0.4;
+  transition: all .5s;
 }
 
 .fish-wrapper.up .fish {
   transform: matrix(1, 0, 0, 1, 0, 0);
 }
-/* .intro {
-  opacity: .1;
+
+/* footer,header{
+  display: none;
+}
+.intro{
+  display: none;
 } */
+
+
+section > div{
+  width: 100%;
+  /* position: fixed; */
+  top: 0;
+  /* height: 100vh; */
+  /* padding: 1rem; */
+}
+section {
+  /* height: 100vh; */
+  width: 100%;
+  /* margin-top: 100vh; */
+}
