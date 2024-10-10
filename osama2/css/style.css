@@ -5329,64 +5329,33 @@ ul.products.columns-1 {
 }
 
 
-/* 
-.svg {
-  position: fixed;
-  opacity: 0;
-  left: 0;
-  right: 0;
-  top: 0px;
-  margin: 0 auto;
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-.fish-box {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 550px;
-  height: 550px;
-}
 
-.fish {
-  width: 100%;
-  height: 100%;
-  transition: transform 1s;
-  transform: matrix(-1, 0, 0, -1, 0, 0);
-}
-
-.fish.up {
-  transform: matrix(1, 0, 0, 1, 0, 0);
-} */
-
-.main{
-  position: relative;
-  z-index: 1;
-}
 .fish-wrapper {
   width: 100%;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
   perspective: 100rem;
   perspective-origin: center center;
   transform-style: preserve-3d;
   pointer-events: none;
 }
 
-
 .fish-box {
   width: max-content;
 }
 
 .fish {
-  /* position: relative;
+  position: relative;
   transform-style: preserve-3d;
   transform-origin: center;
-  width: 339px;
-  height: 339px; */
   transform: matrix(-1, 0, 0, -1, 0, 0);
   transition: all .5s;
   opacity: 0.4;
@@ -5395,6 +5364,3 @@ ul.products.columns-1 {
 .fish-wrapper.up .fish {
   transform: matrix(1, 0, 0, 1, 0, 0);
 }
-/* .intro {
-  opacity: .1;
-} */

@@ -3351,51 +3351,7 @@
     tl.pause()
   </script>
 
-  <!-- <script>
-    let lastScrollY = window.scrollY;
-    let scrolltop = pageYOffset;
-    gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
-    const fish = document.querySelector('.fish-box');
-    const fishImg = document.querySelector('.fish');
 
-
-    gsap.to(fish, {
-      duration: 10,
-      motionPath: {
-        path: "#path",
-        align: "#path",
-        alignOrigin: [0.5, 0.5],
-        autoRotate: true,
-        start: 0, // Начало пути — конец
-        end: 0.7, // Конец пути — начало
-      },
-
-      ease: 'linear',
-      scrollTrigger: {
-        // trigger: ".main",
-        // start: "top 30%",
-        // end: "bottom bottom",
-        scrub: 1,
-        pin: true,
-        markers: true,
-
-        onUpdate: (self) => {
-
-          if (pageYOffset > scrolltop) { // down scroll
-            fishImg.classList.add('down')
-            fishImg.classList.remove('up')
-          } else { // up scroll
-            fishImg.classList.add('up')
-            fishImg.classList.remove('down')
-          }
-          if (pageYOffset === scrolltop) { // first station
-            fishImg.classList.remove('up')
-          }
-          scrolltop = pageYOffset;
-        }
-      }
-    });
-  </script> -->
 
 </body>
 
